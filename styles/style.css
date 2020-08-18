@@ -1,3 +1,9 @@
 .container-fluid1 {
     background-color: aquamarine;
 }
+#outputArea {
+    background-color: bisque
+}
+.navbar-brand {
+    font-size: 4em !important;
+}

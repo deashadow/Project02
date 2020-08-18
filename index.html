@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="styles/style.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
       </head>
@@ -20,7 +20,7 @@
                     <span class="sr-only">Toggle navigation</span>
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="#">Your Sunsets Await!!</a>
+                <a class="navbar-brand" href="#">Your Giphy Awaits!!</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,17 +42,17 @@
                 </ul>
                 <form class="form-inline navbar-left hidden-xs hidden-sm" role="search">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="search" class="form-control" placeholder="Giphy Search" id="search">
                     </div>
                     <button type="submit" class="btn btn-success" id="execute">Submit</button>
                 </form>
              </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
-    <div class="container-fluid1">
+    <div class="container-fluid1" id="outputArea">
       <div class="row">
            <div class="col-xs-6 col-lg-4">
-                  <h3>First column with Nest</h3>
+                  <h3>Giphy 1</h3>
                   <div class="row">
                       <div class="col-6 col-lg-4">
                           <h3>First Nest</h3>
@@ -63,20 +63,22 @@
                   </div>
               </div>
               <div class="col-xs-6 col-lg-4">
-                  <h3>Second</h3>
+                  <h3>Giphy 2</h3>
               Lorem ipsum dolor sit amet, consectetur 
               adipiscing elit. Nulla luctus magna vitae 
               velit ullamcorper, vel pellentesque arcu 
               malesuada. 
               </div>
                  <div class="col-xs-12 col-lg-4">
-                  <h3>Third</h3>
+                  <h3>Giphy 3</h3>
               Lorem ipsum dolor sit amet, consectetur 
               adipiscing elit. Nulla luctus magna vitae 
               velit ullamcorper, vel pellentesque arcu 
               malesuada. 
               </div>
           </div>
+          <div id="outputArea"></div>
+          
   </div>
     <!-- Footer -->
 <footer class="fixed-bottom font-small blue pt-4">
@@ -125,8 +127,37 @@
     <!-- Copyright -->
     </footer>
   <!-- Footer -->
-      <sript>
-
-      </sript>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script>
+        //var api = "http://api.giphy.com/v1/gifs/search";
+       // var apikey = "XOEOrYqNbyGtzXbFpmKdsNx3BpNfcFjv";
+       // var query = "&q=sunsets";
+        $(document).ready( function () {
+        $('#execute').click( function() {
+        //console.log("click handler...")
+        let userInput = $('#search').val()
+          alert(userInput)
+        });
+       // var url=api+apikey+query
+        //loadJSON(url, gotData)
+       // $.ajax {(url: 'http://api.giphy.com/vl/gifs/search?',
+       //   api_key='XOEOrYqNbyGtzXbFpmKdsNx3BpNfcFjv&limit=6', success=userInput)
+          
+        })
+        ////javascript, jQuery
+        var xhr = $.get('http://api.giphy.com/v1/gifs/search&api_key=XOEOrYqNbyGtzXbFpmKdsNx3BpNfcFjv&limit=6');
+        xhr.done(function(userInput) { console.log("success got data", userInput); });
+                      //console.log( "result received...");
+               
+            
+          //  function gotData(giphy) {
+             for (var i = 0; i < giphy.data.length; i++) {
+             createImg(giphy.data[i].images.original.url);
+             $("#outputArea").html(userInput)
+            
+        }
+         
+  
+      </script>
   </body>
  </html>
