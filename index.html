@@ -1,190 +1,132 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Project 02</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/style.css"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-      </head>
+
+<head>
+  <title>Project 02</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+</head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary" role="navigation">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#">Your Giphy Awaits!!</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a class="nav-link" href="#">Active Link</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Ordinary Link</a></li>
-                    <li class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a class="nav-link" href="#">Action</a></li>
-                            <li><a class="nav-link" href="#">Another action</a></li>
-                            <li><a class="nav-link" href="#">Something else here</a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="nav-link" href="#">Separated link</a></li>
-                            <li class="dropdown-divider"></li>
-                            <li><a class="nav-link" href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form class="form-inline navbar-left hidden-xs hidden-sm" role="search">
-                    <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Giphy Search" id="search">
-                    </div>
-                    <button type="submit" class="btn btn-success" id="submit">Submit</button>
-                </form>
-             </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-    </nav>
-    <div class="container-fluid1" id="outputArea">
-      <div class="row">
-           <div class="col-xs-6 col-lg-4">
-                  <h3>Giphy 1</h3>
-                  <div class="row">
-                      <div class="col-6 col-lg-4">
-                          <h3>First Nest</h3>
-                      </div>
-                      <div class="col-6 col-lg-4">
-                          <h3>Second Nest</h3>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-xs-6 col-lg-4">
-                  <h3>Giphy 2</h3>
-              
-              </div>
-                 <div class="col-xs-12 col-lg-4">
-                  <h3>Giphy 3</h3>
-              
-              </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" role="navigation">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="#">Your Giphy Awaits!!</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="navbar-nav mr-auto">
+       <!---   <li class="nav-item active"><a class="nav-link" href="#">Active Link</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ordinary Link</a></li> -->
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle nav-item active" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-link" href="#">Small</a></li>
+              <li><a class="nav-link" href="#">Original</a></li>
+              <li><a class="nav-link" href="#">Large</a></li>
+           <!---   <li class="dropdown-divider"></li>
+              <li><a class="nav-link" href="#">Separated link</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a class="nav-link" href="#">One more separated link</a></li> -->
+            </ul>
+          </li> 
+        </ul>
+        <form class="form-inline navbar-left hidden-xs hidden-sm" role="search">
+          <div class="form-group">
+            <input type="search" class="form-control" placeholder="Giphy Search" id="search">
           </div>
-         <!---- <div id="outputArea"></div> -->
-          
-        <!--<div><img class='resultsImg' src='"+imgsrc+"'/></div> -->
-          
-  </div>
-    <!-- Footer -->
-<footer class="fixed-bottom font-small blue pt-4">
+          <button id="submit" type="button" class="btn btn-success"  onclick="getData()">Submit</button>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+    <div>
+        <div class="d-flex align-items-md-center flex-wrap" id="inner"></div> 
+    </div>
+    <br>
+    <br>
+  
+  <!-- Footer -->
+  <footer class="page-footer font-small special-color-dark pt-4">
     <!-- Footer Links -->
     <div class="container-fluid1 text-center text-md-left">
-        <!-- Grid row -->
-      <div class="row">
-          <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
-            <!-- Content -->
-          <h5 class="text-uppercase">Ronald Rendessy</h5>
-          <p>Here you can use rows and columns to organize your footer content.</p>
-          </div>
-        <!-- Grid column -->
-          <hr class="clearfix w-100 d-md-none pb-3">
-          <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-            <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
-           <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-           </ul>
-        </div>
-        <!-- Grid column -->
-          <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-            <!-- Links -->
-          <h5 class="text-uppercase">Links</h5>
-           <ul class="list-unstyled">
-            <li>
-              <a href="#!">Link 1</a>
-            </li>
-         </ul>
-       </div>
-        <!-- Grid column -->
-        </div>
       <!-- Grid row -->
+      <div class="row">
+        <!-- Grid column -->
+        <div class="col-md-6 mt-md-0 mt-3">
+          <!-- Content -->
+          <h5 class="text-uppercase">Ronald Rendessy</h5>
+          <p>Your Full Stack Web Developer</p>
+        </div>
+        <!-- Grid column -->
+        <hr class="clearfix w-100 d-md-none pb-3">
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Original Giphy</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
+        <!-- Grid column -->
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase">Links</h5>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#!">Large Giphy</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Grid column -->
       </div>
+      <!-- Grid row -->
+    </div>
     <!-- Footer Links -->
-      <!-- Copyright -->
+    <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2020 Copyright:
       <a href="https://sflluxuryhomesearch.com/"> RR.com</a>
     </div>
     <!-- Copyright -->
-    </footer>
+  </footer>
 
   <!-- Footer -->
-  
-      <script>
-        //var api = "http://api.giphy.com/v1/gifs/search";
-       // var apikey = "XOEOrYqNbyGtzXbFpmKdsNx3BpNfcFjv";
-       // var query = "&q=sunsets";
-        $(document).ready( function () {
-        $('#submit').click( function() {
-          let userInput= $('#search').val()
-         console.log("Submit button clicked") 
-          $.ajax ({
-          type: "Get",
-          url: 'http://api.giphy.com/v1/gifs/search?api_key=P8C2XhsgDlNqii9RAqo1TmOZZ4zgIaQL&q=${userInput}'
-          //success: function(data) {
-          })
-              .done((res)=> {
-                console.log("res", res.Search)
 
-              })
-        })
-        })
-        
-        
-         //   var output = "";
-         //   var cnt=0;
-         //   $.each( data.data, function( key, value) {
-         //     if (value.id != undefined) {
-          //      cnt++;
-           //     var imgsrc="http://api.giphy.com/v1/gifs/search/" +value.id+"/giphy." +value.type
-           //     output += "<div><img class='resultsImg' src='"+imgsrc+"'/></div>\n"
-              
-        //console.log("click handler...")
+
+  <script>
+           function getData() {
+         $("#inner").empty();
+         var input = $('#search').val();
+       
        // let userInput = $('#search').val()
-         // alert(userInput)
-       // });
-       // });
-       // var url=api+apikey+query
-        //loadJSON(url, gotData)
-      //  var keyword = $("#keyword").val();
-       // console.log("search button clicked: keyword=" + keyword + "'");
-      //  var url = "http://api.giphy.com/v1/gifs/search";
-      //  var data = $("#keywordform").serializeArray();
-        
-        
-      
-      
-        
-             
-         ///javascript, jQuery
-       // var xhr = $.get('http://api.giphy.com/v1/gifs/search&api_key=XOEOrYqNbyGtzXbFpmKdsNx3BpNfcFjv&limit=6');
-      //  xhr.done(function(userInput) { console.log("success got data", userInput); });
-                      //console.log( "result received...");
-                   
-        //    function gotData(giphy) {
-        //     for (var i = 0; i < giphy.data.length; i++) {
-        //    createImg(giphy.data[i].images.original.url);
-        //    console.log(output);
-        //     $("#outputArea").html("No. of GIFs:" +cnt)
-        //     $(".containerfluid1").html(output); //show response.
-        //     };
-          
-  
-      </script>
-  </body>
- </html>
+       // console.log("Submit button clicked")
+        $.get('http://api.giphy.com/v1/gifs/search?q=' + input + '&api_key=P8C2XhsgDlNqii9RAqo1TmOZZ4zgIaQL&limit30', function (response) {
+
+          for (i=0; response.data.length; i++) {
+            $('#inner').append("<img src=" + response.data[i].images.fixed_height_downsampled.url + `>`)
+          }
+    })
+       }
+    
+
+   
+
+  </script>
+</body>
+
+</html>
