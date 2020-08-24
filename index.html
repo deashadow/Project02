@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary" role="navigation">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark" role="navigation">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
       <div class="navbar-header">
@@ -56,24 +56,35 @@
   <div>
     <div class="flex-container" id="inner"></div>
   </div>
-  <br>
-  <br>
 
-  <!-- Footer -->
+    <!-- Footer -->
   <footer class="page-footer font-small special-color-dark pt-4">
     <!-- Footer Links -->
     <div class="container-fluid1 text-center text-md-left">
       <!-- Grid row -->
       <div class="row">
         <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3">
+        <div class="col-md-3 mt-md-0 mt-3">
           <!-- Content -->
           <h5 class="text-uppercase">Ronald Rendessy</h5>
           <p>Full Stack Web Developer</p>
-          <img id="businesslogo" src="/images/BusinessLogo.jpg"/>
+          <a href="https://sflluxuryhomesearch.com/">
+          <img id="businesslogo"  src="/images/BusinessLogo.jpg" alt text="business log"/>
+        </a>
         </div>
         <!-- Grid column -->
         <hr class="clearfix w-100 d-md-none pb-3">
+        <div class="col-md-3 mb-md-0 mb-3">
+          <!-- Links -->
+          <h5 class="text-uppercase"><ul>Total Gifs</ul></h5>
+          <ul class="list-unstyled">
+            <li>
+              <form>
+              <input type="number" name="gifcount" id="gifcount" placeholder="           Gif Count">
+              </form>
+            </li>
+          </ul>
+        </div>
         <!-- Grid column -->
         <div class="col-md-3 mb-md-0 mb-3">
           <!-- Links -->
@@ -101,7 +112,7 @@
     </div>
     <!-- Footer Links -->
     <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <div class="footer-copyright text-center py-3">© 2020 Copyright: Powered by Giphy <br>
       <a href="https://sflluxuryhomesearch.com/"> RR.com</a>
     </div>
     <!-- Copyright -->
@@ -117,11 +128,12 @@
       // let userInput = $('#search').val()
       // console.log("Submit button clicked")
       $.get('http://api.giphy.com/v1/gifs/search?q=' + input + '&api_key=P8C2XhsgDlNqii9RAqo1TmOZZ4zgIaQL&limit30', function (response) {
-
-        for (i = 0; response.data.length; i++) {
+          for (i = 0; response.data.length; i++) {
           $('#inner').append("<img src=" + response.data[i].images.fixed_height_downsampled.url + `>`)
-        }
-      })
+          var count = $("#inner").children("img").length;
+          $("#gifcount").val(count)
+          }
+      });
     }
   </script>
  </body>
